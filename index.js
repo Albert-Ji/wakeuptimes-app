@@ -1,5 +1,14 @@
 const calcBtn = document.getElementById("calc-btn");
 const wakeUpHoursDiv = document.getElementById("wakeup-hours-div"); // 👀 Add this
+const resultSection = document.getElementById("result-section");
+const promptSection = document.getElementById("prompt-section");
+const returnBtn = document.getElementById("return-btn");
+const refreshBtn = document.getElementById("refresh-btn");
+
+returnBtn.onclick = goBack;
+calcBtn.onclick = calcWakeUpTimes;
+refreshBtn.onclick = calcWakeUpTimes;
+
 
 function calcWakeUpTimes() {
   const fallAsleepTime = new Date();
@@ -21,7 +30,16 @@ function calcWakeUpTimes() {
     cycleDiv.textContent = timeString;
     wakeUpHoursDiv.appendChild(cycleDiv);
   }
+  promptSection.classList.add("hidden");
+  resultSection.classList.remove("hidden");
+}
+
+function goBack() {
+  promptSection.classList.remove("hidden");
+  resultSection.classList.add("hidden");
 }
 
 
-calcBtn.onclick = calcWakeUpTimes;
+
+
+
