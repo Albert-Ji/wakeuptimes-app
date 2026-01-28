@@ -16,6 +16,7 @@ function calcWakeUpTimes() {
 
     // 👀 Create a div for each time
     const cycleDiv = document.createElement("div");
+    cycleDiv.setAttribute("class", "cycle");
     cycleDiv.setAttribute("id", `cycle-${i}`);
     cycleDiv.textContent = timeString;
     wakeUpHoursDiv.appendChild(cycleDiv);
