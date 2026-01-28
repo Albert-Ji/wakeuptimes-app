@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WakeUp Times</title>
+  </head>
+  <body>
+    <h1>WakeUp Times</h1>
+    <p>
+      A sleep cycle lasts about 90 minutes, and a good night's sleep consists of
+      5-6 sleep cycles.
+    </p>
+    <p>If you go to bed now, when should you wake up?</p>
+    <button id="calc-btn">Calculate</button>
+    <script>
+        const calcBtn = document.getElementById("calc-btn");
+        calcBtn.onclick = handleClick;
+
+        function handleClick() {
+            console.log("Bam!");
+            window.alert("Boo!");
+        }
+    </script>
+
+  </body>
+</html>
